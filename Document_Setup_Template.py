@@ -3,7 +3,7 @@ from Document_Template import Template
 
 class Setup_Template:
 
-    def document_template():
+    def document_template(report_type):
         '''
         This method creates the document template that will be run to create the full document
         @return list - this is a list of dictionaries that contain template information for the given template
@@ -12,13 +12,13 @@ class Setup_Template:
         return [doc_template]
 
 
-    def create_template_from_elements():
+    def create_template_from_elements(report_type):
         '''
         This method takes each of the dictionaries from the template and combines them into one large template
         @return tempalte (dict) - a dictionary with the created template
         '''
         template = Template()
-        for next_template in Setup_Template.document_template():
+        for next_template in Setup_Template.document_template(report_type):
             template.combine_templates(next_template)
         return template.get_template()
     

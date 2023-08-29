@@ -5,6 +5,8 @@ import pandas as pd
 class FilePath:
 
     filepath = 'aaa'
+    
+    document_filepath = "a.docx"
 
 class Setup_Data:
 

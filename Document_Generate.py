@@ -17,12 +17,12 @@ class Generate:
             document = Document(filepath)
         return document
 
-    def generate_document():
+    def generate_document(report_type):
         '''
         This method generates the document based on the given template and data
         @return document (Document) - a python-docs document object
         '''
-        document = Generate.setup_document(FilePath.Front_Page())
-        template = Setup_Template.create_template_from_elements()
+        document = Generate.setup_document()
+        template = Setup_Template.create_template_from_elements(report_type)
         document = Run_From_Template.Create_Elements(document,template)
         return document
